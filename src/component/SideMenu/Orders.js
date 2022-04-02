@@ -13,6 +13,7 @@ export default function Orders() {
   }, []);
 
   console.log(order);
+
   return (
     <div>
       <Divider orientation="left">Захиалгууд</Divider>
@@ -33,6 +34,7 @@ export default function Orders() {
         bordered
         dataSource={order}
         renderItem={(item) => {
+          console.log(item)
           return (
             <>
               <List.Item className="listItems">
@@ -55,7 +57,7 @@ export default function Orders() {
                     xs={{ span: 11, offset: 1 }}
                     lg={{ span: 6, offset: 2 }}
                   >
-                    {item.customer}
+                    {item.phone}
                   </Col>
                   <Col
                     className="cols"

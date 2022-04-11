@@ -7,10 +7,7 @@ export default function FoodMenu() {
   console.log(foods);
   return (
     <div>
-      {/* {foods.map((data) => {
-        console.log(data)
-        return <div>{data.name}</div>;
-      })} */}
+
       <div>
         <Divider orientation="left">Foods</Divider>
         <List
@@ -19,24 +16,11 @@ export default function FoodMenu() {
           bordered
           dataSource={foods}
           renderItem={(item) => {
-            console.log(item)
+
             return (
               <>
                 <List.Item className="listItems">
                   <Row className="rows">
-                    {/* <Col span={4}>{item.customer}</Col>
-                  <Col span={4}>{item.number}</Col>
-                  <Col span={4}>{item.customer}</Col>
-                  <Col span={4}>{item.customer}</Col>
-                  <Col span={4}>{item.customer}</Col>
-                  <Col span={4}>{item.customer}</Col> */}
-                    <Col
-                      className="cols"
-                      xs={{ span: 10, offset: 1 }}
-                      lg={{ span: 1, offset: 2 }}
-                    >
-                      {item.category}
-                    </Col>
                     <Col
                       className="cols"
                       xs={{ span: 11, offset: 1 }}

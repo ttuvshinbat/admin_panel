@@ -16,6 +16,15 @@ const registerUser = async (credentials) => {
     body: JSON.stringify(credentials),
   });
 };
+export const allUser = async () => {
+  return await fetch("http://52.221.185.255:3002/api/users", {
+    method: "GET",
+    headeers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(),
+  });
+};
 
 const userInfoStorage = (userInfo) => {
   localStorage.setItem("token", userInfo.token);
@@ -26,4 +35,5 @@ export const userService = {
   loginUser,
   registerUser,
   userInfoStorage,
+  allUser
 };
